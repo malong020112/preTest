@@ -49,8 +49,6 @@ The following points are what you must follow:
 7. If you reject this answer, please reply with the exact string "REJECT".
 """
 
-
-
 def get_all_tasks_from_jsonl(file_path):
     """读取JSONL文件中所有条目，返回包含完整数据的列表"""
     entries = []
@@ -96,18 +94,18 @@ for item in all_tasks:
     dialogue_states.append({
         "dialogue_id": idx,
         "is_active": True,
+        "Judgment_accuracy": True,
         "round_used": 0,
         "messages": [],
         
     })
-    history = f"User: {item['task']}\n"
     dialogue_states[idx]["messages"].append({
         "role": "user",
         "content": item['task']
     })
     cnt = 0
-    while cnt < 5:
-    # while dialogue_states[idx]["is_active"]:
+    # while cnt < 5:
+    while dialogue_states[idx]["is_active"]:
         assistant_response = assistant.chat.completions.create(
             model = "claude-sonnet-4-20250514",
             messages = [
@@ -116,11 +114,13 @@ for item in all_tasks:
             ],
             stream = False
         )
-        history += f"Assistant: {assistant_response.choices[0].message.content}\n"
         assistant_message = {
             "role": "assistant",
             "content": assistant_response.choices[0].message.content
         }
+        if cnt == 0:
+            dialogue_states[idx]["Judgment_accuracy"] = ("vague" in assistant_message["content"].lower()) == item['vague']
+
         dialogue_states[idx]["messages"].append(assistant_message)
         
         user_response = user.chat.completions.create(
@@ -131,7 +131,6 @@ for item in all_tasks:
             ],
             stream = False
         )
-        history += f"User: {user_response.choices[0].message.content}\n"
         user_message = {
             "role": "user",
             "content": user_response.choices[0].message.content
@@ -148,7 +147,6 @@ for item in all_tasks:
 
     dialogue_states[idx]["round_used"] = cnt + 1 # 记录对话轮数
 
-    # print(history + "\n")
     with open("result3-nolimit-claude-sonnet-4", "a", encoding="utf-8") as f:  # 使用追加模式，保留所有对话
         json.dump(dialogue_states[idx], f, ensure_ascii=False, indent=2)
         f.write("\n")  # 分隔不同对话
