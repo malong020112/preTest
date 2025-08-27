@@ -1,0 +1,3 @@
+# 生成的数据的字段
+is_active：限制最多5轮情况下，对话是否正常，为false则正常结束，为true则超过5轮被被强制结束
+Judgment_accuracy：assistant第一轮对任务模糊性判断是否正确
