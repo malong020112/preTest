@@ -62,3 +62,16 @@ subprocess.run(
     shell=True,
 )
 PY
+
+
+
+export CONDA_PREFIX=/opt/nas/p/conda/envs/verlaa
+
+NVJIT_DIR="$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/nvjitlink/lib"
+CUSPARSE_DIR="$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/cusparse/lib"
+CUBLAS_DIR="$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/cublas/lib"
+RUNTIME_DIR="$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/cuda_runtime/lib"
+NVRTC_DIR="$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/cuda_nvrtc/lib"
+
+export LD_LIBRARY_PATH="$NVJIT_DIR:$CUSPARSE_DIR:$CUBLAS_DIR:$RUNTIME_DIR:$NVRTC_DIR:$HOME/numa-migrate:${LD_LIBRARY_PATH:-}"
+
