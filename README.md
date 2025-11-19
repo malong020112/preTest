@@ -75,3 +75,17 @@ NVRTC_DIR="$CONDA_PREFIX/lib/python3.11/site-packages/nvidia/cuda_nvrtc/lib"
 
 export LD_LIBRARY_PATH="$NVJIT_DIR:$CUSPARSE_DIR:$CUBLAS_DIR:$RUNTIME_DIR:$NVRTC_DIR:$HOME/numa-migrate:${LD_LIBRARY_PATH:-}"
 
+python - << 'PY'
+import torch, subprocess
+subprocess.run(
+    "ldd $(python -c 'import torch,inspect; import torch._C; print(torch._C.__file__)') | grep nvJitLink",
+    shell=True,
+)
+PY
+
+python - << 'PY'
+from sgl_kernel import common_ops
+print("sgl_kernel / libnuma OK")
+PY
+
+
