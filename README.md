@@ -173,3 +173,207 @@ The actor is dead because its worker process has died. Worker exit type: SYSTEM_
 
 
 
+  warnings.warn(
+[36m(pid=15334)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+[36m(pid=15334)[0m   import pynvml  # type: ignore[import]
+[36m(TaskRunner pid=15334)[0m /opt/nas/s/enyu/verl_askActively/verl/trainer/main_ppo.py:258: UserWarning: Disabled critic as algorithm.adv_estimator != gae. If it is not intended, please set critic.enable=True
+[36m(TaskRunner pid=15334)[0m   use_critic=need_critic(config),
+[36m(TaskRunner pid=15334)[0m /opt/nas/s/enyu/verl_askActively/verl/utils/profiler/config.py:49: UserWarning: Torch profiler tool config is not fully supported now.
+[36m(TaskRunner pid=15334)[0m   warnings.warn("Torch profiler tool config is not fully supported now.", stacklevel=1)
+[36m(TaskRunner pid=15334)[0m Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=15334)[0m WARNING:2025-11-20 01:08:17,569:Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=15334)[0m 
+Filtering prompts longer than 1024 tokens (num_proc=1):   0%|          | 0/2329 [00:00<?, ? examples/s]
+[36m(TaskRunner pid=15334)[0m 
+Filtering prompts longer than 1024 tokens (num_proc=1):  43%|████▎     | 1000/2329 [00:03<00:04, 326.59 examples/s]
+[36m(TaskRunner pid=15334)[0m 
+Filtering prompts longer than 1024 tokens (num_proc=1):  86%|████████▌ | 2000/2329 [00:05<00:00, 375.76 examples/s]
+[36m(TaskRunner pid=15334)[0m 
+Filtering prompts longer than 1024 tokens (num_proc=1): 100%|██████████| 2329/2329 [00:06<00:00, 386.28 examples/s]
+[36m(TaskRunner pid=15334)[0m 
+Filtering prompts longer than 1024 tokens (num_proc=1): 100%|██████████| 2329/2329 [00:07<00:00, 322.80 examples/s]
+[36m(TaskRunner pid=15334)[0m Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=15334)[0m WARNING:2025-11-20 01:08:49,192:Setting TOKENIZERS_PARALLELISM=false for forked processes.
+[36m(TaskRunner pid=15334)[0m /opt/nas/s/enyu/verl_askActively/verl/trainer/ppo/ray_trainer.py:339: UserWarning: Disabled critic as algorithm.adv_estimator != gae. If it is not intended, please set critic.enable=True
+[36m(TaskRunner pid=15334)[0m   self.use_critic = need_critic(self.config)
+[36m(pid=26109)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+[36m(pid=26109)[0m   import pynvml  # type: ignore[import]
+[36m(WorkerDict pid=26106)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=26106)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(pid=26110)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.[32m [repeated 7x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(pid=26110)[0m   import pynvml  # type: ignore[import][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26103)[0m 
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+[36m(WorkerDict pid=26110)[0m 
+Loading checkpoint shards:  50%|█████     | 1/2 [00:30<00:30, 30.52s/it]
+[36m(WorkerDict pid=26110)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 14x across cluster][0m
+[36m(WorkerDict pid=26104)[0m 
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26104)[0m 
+Loading checkpoint shards: 100%|██████████| 2/2 [00:57<00:00, 28.25s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:57<00:00, 28.66s/it]
+[36m(WorkerDict pid=26105)[0m 
+Loading checkpoint shards:  50%|█████     | 1/2 [00:30<00:30, 30.94s/it][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26106)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+[36m(WorkerDict pid=26106)[0m   import pynvml  # type: ignore[import]
+[36m(WorkerDict pid=26110)[0m 
+Loading checkpoint shards: 100%|██████████| 2/2 [00:57<00:00, 28.56s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:57<00:00, 28.85s/it][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26106)[0m 
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+[36m(WorkerDict pid=26106)[0m /opt/nas/s/enyu/verl_askActively/verl/utils/profiler/config.py:49: UserWarning: Torch profiler tool config is not fully supported now.
+[36m(WorkerDict pid=26106)[0m   warnings.warn("Torch profiler tool config is not fully supported now.", stacklevel=1)
+[36m(WorkerDict pid=26106)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:680: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=26106)[0m   warnings.warn(
+[36m(WorkerDict pid=26110)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.[32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26110)[0m   import pynvml  # type: ignore[import][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26108)[0m 
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 14.36it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 14.33it/s][32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=26108)[0m 
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26110)[0m /opt/nas/s/enyu/verl_askActively/verl/utils/profiler/config.py:49: UserWarning: Torch profiler tool config is not fully supported now.[32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26110)[0m   warnings.warn("Torch profiler tool config is not fully supported now.", stacklevel=1)[32m [repeated 7x across cluster][0m
+[36m(WorkerDict pid=26107)[0m [2025-11-20 01:12:06] Downcasting torch.float32 to torch.bfloat16.
+[36m(WorkerDict pid=26107)[0m [2025-11-20 01:12:06] Using default HuggingFace chat template with detected content format: string
+[36m(WorkerDict pid=26110)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:680: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=26110)[0m   warnings.warn([32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=26107)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+[36m(WorkerDict pid=26107)[0m   import pynvml  # type: ignore[import]
+[36m(WorkerDict pid=26105)[0m [2025-11-20 01:12:06] Downcasting torch.float32 to torch.bfloat16.[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=26109)[0m [2025-11-20 01:12:06] Using default HuggingFace chat template with detected content format: string[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=26105)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+[36m(WorkerDict pid=26105)[0m   import pynvml  # type: ignore[import]
+[36m(WorkerDict pid=26107)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.[32m [repeated 12x across cluster][0m
+[36m(WorkerDict pid=26107)[0m   import pynvml  # type: ignore[import][32m [repeated 12x across cluster][0m
+[36m(WorkerDict pid=26107)[0m [2025-11-20 01:13:05 TP0] Downcasting torch.float32 to torch.bfloat16.
+[36m(WorkerDict pid=26107)[0m [2025-11-20 01:13:05 TP0] Init torch distributed begin.
+[36m(WorkerDict pid=26103)[0m [2025-11-20 01:13:05 TP1] Scheduler hit an exception: Traceback (most recent call last):
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/scheduler.py", line 2534, in run_scheduler_process
+[36m(WorkerDict pid=26103)[0m     scheduler = Scheduler(
+[36m(WorkerDict pid=26103)[0m                 ^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/scheduler.py", line 313, in __init__
+[36m(WorkerDict pid=26103)[0m     self.tp_worker = TpWorkerClass(
+[36m(WorkerDict pid=26103)[0m                      ^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 67, in __init__
+[36m(WorkerDict pid=26103)[0m     self.worker = TpModelWorker(
+[36m(WorkerDict pid=26103)[0m                   ^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/tp_worker.py", line 84, in __init__
+[36m(WorkerDict pid=26103)[0m     self.model_runner = ModelRunner(
+[36m(WorkerDict pid=26103)[0m                         ^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/model_executor/model_runner.py", line 235, in __init__
+[36m(WorkerDict pid=26103)[0m     min_per_gpu_memory = self.init_torch_distributed()
+[36m(WorkerDict pid=26103)[0m                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/model_executor/model_runner.py", line 551, in init_torch_distributed
+[36m(WorkerDict pid=26103)[0m     init_distributed_environment(
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/distributed/parallel_state.py", line 1255, in init_distributed_environment
+[36m(WorkerDict pid=26103)[0m     torch.distributed.init_process_group(
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[36m(WorkerDict pid=26103)[0m     return func(*args, **kwargs)
+[36m(WorkerDict pid=26103)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 95, in wrapper
+[36m(WorkerDict pid=26103)[0m     func_return = func(*args, **kwargs)
+[36m(WorkerDict pid=26103)[0m                   ^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 1710, in init_process_group
+[36m(WorkerDict pid=26103)[0m     store, rank, world_size = next(rendezvous_iterator)
+[36m(WorkerDict pid=26103)[0m                               ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/rendezvous.py", line 230, in _tcp_rendezvous_handler
+[36m(WorkerDict pid=26103)[0m     store = _create_c10d_store(
+[36m(WorkerDict pid=26103)[0m             ^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/rendezvous.py", line 198, in _create_c10d_store
+[36m(WorkerDict pid=26103)[0m     return TCPStore(
+[36m(WorkerDict pid=26103)[0m            ^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m RuntimeError: nonce == returnedNonce INTERNAL ASSERT FAILED at "/pytorch/torch/csrc/distributed/c10d/TCPStore.cpp":418, please report a bug to PyTorch. Ping failed, invalid nonce returned
+[36m(WorkerDict pid=26103)[0m 
+[36m(WorkerDict pid=26103)[0m [2025-11-20 01:13:05 TP0] Scheduler hit an exception: Traceback (most recent call last):
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/scheduler.py", line 2534, in run_scheduler_process
+[36m(WorkerDict pid=26103)[0m     scheduler = Scheduler(
+[36m(WorkerDict pid=26103)[0m                 ^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/scheduler.py", line 313, in __init__
+[36m(WorkerDict pid=26103)[0m     self.tp_worker = TpWorkerClass(
+[36m(WorkerDict pid=26103)[0m                      ^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/tp_worker_overlap_thread.py", line 67, in __init__
+[36m(WorkerDict pid=26103)[0m     self.worker = TpModelWorker(
+[36m(WorkerDict pid=26103)[0m                   ^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/tp_worker.py", line 84, in __init__
+[36m(WorkerDict pid=26103)[0m     self.model_runner = ModelRunner(
+[36m(WorkerDict pid=26103)[0m                         ^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/model_executor/model_runner.py", line 235, in __init__
+[36m(WorkerDict pid=26103)[0m     min_per_gpu_memory = self.init_torch_distributed()
+[36m(WorkerDict pid=26103)[0m                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/model_executor/model_runner.py", line 551, in init_torch_distributed
+[36m(WorkerDict pid=26103)[0m     init_distributed_environment(
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/distributed/parallel_state.py", line 1255, in init_distributed_environment
+[36m(WorkerDict pid=26103)[0m     torch.distributed.init_process_group(
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[36m(WorkerDict pid=26103)[0m     return func(*args, **kwargs)
+[36m(WorkerDict pid=26103)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 95, in wrapper
+[36m(WorkerDict pid=26103)[0m     func_return = func(*args, **kwargs)
+[36m(WorkerDict pid=26103)[0m                   ^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 1710, in init_process_group
+[36m(WorkerDict pid=26103)[0m     store, rank, world_size = next(rendezvous_iterator)
+[36m(WorkerDict pid=26103)[0m                               ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/rendezvous.py", line 230, in _tcp_rendezvous_handler
+[36m(WorkerDict pid=26103)[0m     store = _create_c10d_store(
+[36m(WorkerDict pid=26103)[0m             ^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/rendezvous.py", line 198, in _create_c10d_store
+[36m(WorkerDict pid=26103)[0m     return TCPStore(
+[36m(WorkerDict pid=26103)[0m            ^^^^^^^^^
+[36m(WorkerDict pid=26103)[0m RuntimeError: nonce == returnedNonce INTERNAL ASSERT FAILED at "/pytorch/torch/csrc/distributed/c10d/TCPStore.cpp":418, please report a bug to PyTorch. Ping failed, invalid nonce returned
+[36m(WorkerDict pid=26103)[0m 
+[36m(WorkerDict pid=26109)[0m 
+[36m(WorkerDict pid=26109)[0m 
+[36m(WorkerDict pid=26106)[0m [rank3]:[W1120 01:13:20.886572352 TCPStore.cpp:125] [c10d] recvValue failed on SocketImpl(fd=81, addr=[10-80-8-181.mllm-ppo-qwen-npsvc.mllm.svc.cluster.local]:51542, remote=[10-80-8-181.mllm-ppo-qwen-npsvc.mllm.svc.cluster.local]:55903): Connection reset by peer
+[36m(WorkerDict pid=26106)[0m Exception raised from recvBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:675 (most recent call first):
+[36m(WorkerDict pid=26106)[0m frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7fdcfc3785e8 in /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/lib/libc10.so)
+[36m(WorkerDict pid=26106)[0m frame #1: <unknown function> + 0x5ba8bfe (0x7fbf896cdbfe in /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+[36m(WorkerDict pid=26106)[0m frame #2: <unknown function> + 0x5baafcf (0x7fbf896cffcf in /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+[36m(WorkerDict pid=26106)[0m frame #3: <unknown function> + 0x5bab84a (0x7fbf896d084a in /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+[36m(WorkerDict pid=26106)[0m frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x2a9 (0x7fbf896ca2a9 in /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so)
+[36m(WorkerDict pid=26106)[0m frame #5: c10d::ProcessGroupNCCL::heartbeatMonitor() + 0x379 (0x7fbf4adc99f9 in /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(WorkerDict pid=26106)[0m frame #6: <unknown function> + 0xdf0e6 (0x7fdd501610e6 in /opt/nas/p/conda/envs/verlaa/bin/../lib/libstdc++.so.6)
+[36m(WorkerDict pid=26106)[0m frame #7: <unknown function> + 0x94ac3 (0x7fdd52999ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+[36m(WorkerDict pid=26106)[0m frame #8: <unknown function> + 0x126850 (0x7fdd52a2b850 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+[36m(WorkerDict pid=26106)[0m 
+[36m(WorkerDict pid=26106)[0m [rank3]:[W1120 01:13:20.892446889 ProcessGroupNCCL.cpp:1662] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Connection reset by peer
+[36m(WorkerDict pid=26105)[0m /opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.[32m [repeated 10x across cluster][0m
+[36m(WorkerDict pid=26105)[0m   import pynvml  # type: ignore[import][32m [repeated 10x across cluster][0m
+[36m(WorkerDict pid=26105)[0m [2025-11-20 01:13:05 TP1] Downcasting torch.float32 to torch.bfloat16.[32m [repeated 15x across cluster][0m
+[36m(WorkerDict pid=26103)[0m [2025-11-20 01:13:05 TP0] Init torch distributed begin.[32m [repeated 3x across cluster][0m
+[36m(WorkerDict pid=26109)[0m [2025-11-20 01:13:05 TP1] Scheduler hit an exception: Traceback (most recent call last):[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/managers/scheduler.py", line 2534, in run_scheduler_process[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     scheduler = Scheduler([32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m                 ^^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/model_executor/model_runner.py", line 235, in __init__[32m [repeated 8x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     self.tp_worker = TpWorkerClass([32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m                   ^^^^^^^^^^^^^^[32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     self.worker = TpModelWorker([32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     self.model_runner = ModelRunner([32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m                         ^^^^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     min_per_gpu_memory = self.init_torch_distributed()[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/model_executor/model_runner.py", line 551, in init_torch_distributed[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     init_distributed_environment([32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/sglang/srt/distributed/parallel_state.py", line 1255, in init_distributed_environment[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     torch.distributed.init_process_group([32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 95, in wrapper[32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     return func(*args, **kwargs)[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m                   ^^^^^^^^^^^^^^^^^^^^^[32m [repeated 4x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     func_return = func(*args, **kwargs)[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 1710, in init_process_group[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     store, rank, world_size = next(rendezvous_iterator)[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m                               ^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/rendezvous.py", line 230, in _tcp_rendezvous_handler[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     store = _create_c10d_store([32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m             ^^^^^^^^^^^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m   File "/opt/nas/p/conda/envs/verlaa/lib/python3.11/site-packages/torch/distributed/rendezvous.py", line 198, in _create_c10d_store[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m     return TCPStore([32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m            ^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26109)[0m RuntimeError: nonce == returnedNonce INTERNAL ASSERT FAILED at "/pytorch/torch/csrc/distributed/c10d/TCPStore.cpp":418, please report a bug to PyTorch. Ping failed, invalid nonce returned[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=26107)[0m 
+[36m(WorkerDict pid=26108)[0m 
+[36m(WorkerDict pid=26104)[0m 
+[36m(WorkerDict pid=26105)[0m 
+[36m(WorkerDict pid=26110)[0m 
+
